@@ -18,18 +18,21 @@ public class prime_composite_exam
 		{
 			System.out.println("\nPlease enter a number: ");
 			num = input.nextInt();
-			//input.close(); // avoid resource leak
+			
 
 			numCheck(); // calling the prime/composite checker method
 			incrementer++;
 		
 			array_comp(); // calling the array_comp sorter method
-			show_array();
+			
 		}
 
 		while (incrementer < 6);
 
-		
+		show_array();
+
+		input.close();
+
 	}
 	
 	static void numCheck() // number checker
@@ -53,21 +56,19 @@ public class prime_composite_exam
 				System.out.printf("%d is a prime number.\n", num);
 			else
 				System.out.printf("%d is a composite number.\n", num);
-
-			isPrime = true; // fix this shit right now
-			
-			
 		}
 	}
 	
 	static void array_comp() //stores and sorts values
 	{
-		if (isPrime = true)
+		if (isPrime)
 		{
 			prime_list.add(num);
 		}
 		else
 			composite_list.add(num);
+		
+		isPrime = true;
 	}
 
 	static void show_array()
