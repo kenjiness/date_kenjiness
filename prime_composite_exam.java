@@ -24,7 +24,7 @@ public class prime_composite_exam
 			incrementer++;
 		
 			array_comp(); // calling the array_comp sorter method
-
+			show_array();
 		}
 
 		while (incrementer < 6);
