@@ -9,24 +9,31 @@ public class prime_composite_exam
 	public static int num;
 	public static Scanner input = new Scanner(System.in);
 
+	public static int incrementer = 0;
+	public static boolean isPrime = true;
+
 	public static void main(String[] args) //main program
 	{
-		while (true)
+		do
 		{
-		
-		System.out.println("\nPlease enter a number: ");
-		num = input.nextInt();
-		//input.close(); // avoid resource leak
+			System.out.println("\nPlease enter a number: ");
+			num = input.nextInt();
+			//input.close(); // avoid resource leak
 
-		numCheck(); // calling the prime/composite checker method
+			numCheck(); // calling the prime/composite checker method
+			incrementer++;
+		
+			array_comp(); // calling the array_comp sorter method
+
 		}
+
+		while (incrementer < 6);
+
+		show_array();
 	}
 	
 	static void numCheck() // number checker
 	{
-
-		boolean isPrime = true;
-
 		if (num < 1)
 			System.out.println("Number needs to be greater than 1.");
 		else if (num == 1)
@@ -39,20 +46,27 @@ public class prime_composite_exam
 					isPrime = false;
 					break;
 			}
+			/* 
 			if (isPrime)
 				System.out.printf("%d is a prime number.\n", num);
 			else
 				System.out.printf("%d is a composite number.\n", num);
-	
-			
+			*/	
 		}
-		
-		
 	}
 	
 	static void array_comp() //stores and sorts values
 	{
-		
+		if (isPrime)
+			prime_list.add(num);
+		else
+			composite_list.add(num);
+	}
+
+	static void show_array()
+	{
+		System.out.println("Prime numbers are: " + prime_list);
+		System.out.println("Composite numbers are: " +composite_list);
 	}
 }
 
