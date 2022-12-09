@@ -11,22 +11,44 @@ public class prime_composite_exam
 
 	public static void main(String[] args) //main program
 	{
+		while (true)
+		{
 		
-		System.out.println("Please enter a number: ");
+		System.out.println("\nPlease enter a number: ");
 		num = input.nextInt();
-	
+		//input.close(); // avoid resource leak
+
+		numCheck(); // calling the prime/composite checker method
+		}
 	}
 	
-	static void numCheck() //number checker
+	static void numCheck() // number checker
 	{
 
-		int num;
-		boolean checker = false;
-		
-		
-		input.close(); //avoid resource leak
-	}
+		boolean isPrime = true;
+
+		if (num < 1)
+			System.out.println("Number needs to be greater than 1.");
+		else if (num == 1)
+			System.out.println("Number is neither prime nor composite.");
+		else
+		{
+			for (int divisor = 2; divisor <= (num / 2); divisor++)
+			{
+				if ((num % divisor) == 0)
+					isPrime = false;
+					break;
+			}
+			if (isPrime)
+				System.out.printf("%d is a prime number.\n", num);
+			else
+				System.out.printf("%d is a composite number.\n", num);
 	
+			
+		}
+		
+		
+	}
 	
 	static void array_comp() //stores and sorts values
 	{
