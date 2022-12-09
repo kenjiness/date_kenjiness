@@ -29,7 +29,7 @@ public class prime_composite_exam
 
 		while (incrementer < 6);
 
-		show_array();
+		
 	}
 	
 	static void numCheck() // number checker
@@ -43,22 +43,29 @@ public class prime_composite_exam
 			for (int divisor = 2; divisor <= (num / 2); divisor++)
 			{
 				if ((num % divisor) == 0)
+				{
 					isPrime = false;
 					break;
+				}
 			}
-			/* 
+			
 			if (isPrime)
 				System.out.printf("%d is a prime number.\n", num);
 			else
 				System.out.printf("%d is a composite number.\n", num);
-			*/	
+
+			isPrime = true; // fix this shit right now
+			
+			
 		}
 	}
 	
 	static void array_comp() //stores and sorts values
 	{
-		if (isPrime)
+		if (isPrime = true)
+		{
 			prime_list.add(num);
+		}
 		else
 			composite_list.add(num);
 	}
