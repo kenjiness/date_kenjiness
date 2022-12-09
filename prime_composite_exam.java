@@ -3,10 +3,10 @@ import java.util.ArrayList;
 
 public class prime_composite_exam 
 {
-	public static ArrayList <Integer> prime_list = new ArrayList <Integer>();
-	public static ArrayList <Integer> composite_list = new ArrayList <Integer>();
+	public static ArrayList <Integer> prime_list = new ArrayList <Integer>(); // stores prime numbers
+	public static ArrayList <Integer> composite_list = new ArrayList <Integer>(); // stores composite numbers
 	
-	public static int num;
+	public static int num; // user enters number
 	public static Scanner input = new Scanner(System.in);
 
 	public static int incrementer = 0;
@@ -14,25 +14,31 @@ public class prime_composite_exam
 
 	public static void main(String[] args) //main program
 	{
-		do
+		try
 		{
-			System.out.println("\nPlease enter a number: ");
-			num = input.nextInt();
+			do
+			{
+				System.out.println("\nPlease enter a number: ");
+				num = input.nextInt();
 			
 
-			numCheck(); // calling the prime/composite checker method
-			incrementer++;
+				numCheck(); // calling the prime/composite checker method
+				incrementer++;
 		
-			array_comp(); // calling the array_comp sorter method
+				array_comp(); // calling the array_comp sorter method
 			
+			}
+
+				while (incrementer < 6);
+
+				show_array();
+
+				input.close();
 		}
-
-		while (incrementer < 6);
-
-		show_array();
-
-		input.close();
-
+		catch(Exception e)
+		{
+			System.out.println("Please enter a valid value!");
+		}
 	}
 	
 	static void numCheck() // number checker
@@ -53,9 +59,9 @@ public class prime_composite_exam
 			}
 			
 			if (isPrime)
-				System.out.printf("%d is a prime number.\n", num);
+				System.out.printf("\n%d is a prime number.\n", num);
 			else
-				System.out.printf("%d is a composite number.\n", num);
+				System.out.printf("\n%d is a composite number.\n", num);
 		}
 	}
 	
