@@ -7,11 +7,11 @@ public class practice_code_ni_alex
     {
         Scanner input = new Scanner (System.in); // scanner declaration
         int arn; // idk what is this
-        boolean loop = true; //boolean thingy
         boolean ar = true;
         String abc = "";
     
-        System.out.println("Please input your values now: "); //asks for user input
+        System.out.println("Please input your values: "); //asks for user input
+        
  
     while(ar) // while ar remains true, do
     {
@@ -34,15 +34,14 @@ public class practice_code_ni_alex
  
     for (int incrementer = 0; incrementer <= prox.length-1; incrementer++)
         {
-            
             prox [incrementer] = alt [incrementer + 1];
-            //prox [incrementer] means prox [nth index] in prox array
+            // prox [incrementer] means prox [nth index] in prox array
+            // upon reaching array limit, increase array limit by 1
         }
 
-        System.out.println("Output: " + Arrays.toString(prox));
-        loop=false;
-        System.exit(0);
-
+        System.out.println("Output: " + Arrays.toString(prox)); // displays all integers
+        System.exit(0); // forcibly exits program
+        input.close();
     }
-
+    
 }
