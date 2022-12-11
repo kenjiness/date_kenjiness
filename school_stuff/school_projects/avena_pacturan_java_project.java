@@ -1,3 +1,5 @@
+package school_projects;
+
 //RECEIPT
 
 import java.util.Scanner;
