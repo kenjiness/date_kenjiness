@@ -1,15 +1,17 @@
 import java.util.Scanner;
 import java.util.Arrays;
 
-public class practice_code_ni_alex {
-    public static void main (String[] args){
-    Scanner input = new Scanner (System.in); // scanner declaration
-    int arn; // idk what is this
-    boolean loop = true; //boolean thingy
-    boolean ar = true;
-    String abc = "";
+public class practice_code_ni_alex 
+{
+    public static void main (String[] args)
+    {
+        Scanner input = new Scanner (System.in); // scanner declaration
+        int arn; // idk what is this
+        boolean loop = true; //boolean thingy
+        boolean ar = true;
+        String abc = "";
     
-    System.out.println("Please input your values now"); //asks for user input
+        System.out.println("Please input your values now: "); //asks for user input
  
     while(ar) // while ar remains true, do
     {
@@ -22,26 +24,24 @@ public class practice_code_ni_alex {
         }
         else
         {
-            ar=false; // if data input != int, then end loop
+            ar=false; // if data input is not an int, then end loop from while condition
         }
     }
  
         String[] alt = abc.split(" "); // splits the array contents by using " " as separator
 
-        String[] prox = new String[alt.length - 1];
+        String[] prox = new String[alt.length - 1]; //  create new array named prox with array size less than 1 alt size/length
  
-    for (int i = 0; i <= prox.length-1; i++)
+    for (int incrementer = 0; incrementer <= prox.length-1; incrementer++)
         {
-            prox [i] = alt [i + 1];
+            
+            prox [incrementer] = alt [incrementer + 1];
+            //prox [incrementer] means prox [nth index] in prox array
         }
 
-    System.out.println("Output: " + Arrays.toString(prox));
-    loop=false;
-    System.exit(0);
- 
- 
-
- 
+        System.out.println("Output: " + Arrays.toString(prox));
+        loop=false;
+        System.exit(0);
 
     }
 
