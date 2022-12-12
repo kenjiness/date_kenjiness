@@ -6,14 +6,13 @@ public class experimenting_methods_functions {
     public static int a;
     public static int b;
     public static int c;
-    public static boolean loop = true;
+
     public static void main (String [] args)
     {
         try
         {
             askUserInput();
             addTwoNumbers(a, b);
-            loop = false;
         }
         catch (Exception e)
         {
