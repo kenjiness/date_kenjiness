@@ -1,7 +1,11 @@
+import java.util.Scanner;
+
 public class returntypes 
 {
+    public static int age;
     public static void main (String [] args)
     {
+        Scanner sc = new Scanner (System.in);
         /* Methods w/ return
          * modifiers returntype methodName (arguments)
          * {
@@ -9,13 +13,18 @@ public class returntypes
          *      return value;
          * } 
          */
+        System.out.println("How old are you?");
+        age = sc.nextInt();
 
-        int sum = add (5, 2);
-        System.out.println(sum);
+        isLegalAge(age);
+        
+        System.out.println(isLegalAge(age));
+        sc.close();
     }
-
-    static int add (int num1, int num2)
-        {
-            return num1 + num2;
-        }
+    static boolean isLegalAge(int age)
+    {
+        if (age >= 18) return true;
+        else return false;
+    }
+    
 }
