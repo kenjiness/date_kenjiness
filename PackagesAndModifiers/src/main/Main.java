@@ -13,11 +13,7 @@ public class Main
             Arithmetic a = new Arithmetic();
             Constants c = new Constants();
 
-            a.
-
-            int result = a.add(5, 2);
-
-            System.out.println(result);
+            System.out.println(c.pi);
             
         }
 
