@@ -13,7 +13,7 @@ public class returntypes
          *      return value;
          * } 
          */
-        System.out.println("How old are you?");
+        System.out.print("How old are you?");
         age = sc.nextInt();
 
         isLegalAge(age);
